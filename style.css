@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600&display=swap');
+* {
+  font-size: 2rem;
+ /* border: 1px solid white */
+}
+
+.container {
+  height: 36vh;
+  display: flex;
+  align-items: flex-end
+}
+.moon {
+  animation-duration: 40s;
+  animation-name: move;
+  animation-iteration-count: infinite
+}
+@keyframes move {
+  0% {
+    transform: translateX(-300px)
+  }
+  100% {
+    transform: translateX(100vw)
+  }
+}
+.jump {
+  animation-duration: 20s;
+  animation-name: jump;
+  animation-iteration-count: infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(1,1) translate(0, 0) ;
+  }
+  
+  10% {
+    transform: scale(1.2,0.8) translate(2em, -2em);
+  }
+  20% {
+    transform: scale(1,1) translate(4em, 0);
+  }
+  30% {transform: scale(1.2,.8) translate(6em, -2em);}
+  40% {transform: scale(1,1) translate(8em, 0)}
+  50% {transform: scale(1.2,.8) translate(10em, -2em)}
+  60% {transform: scale(1,1) translate(12em, 0)}
+  70% {transform: scale(1.2,.8) translate(14em, -2em)}
+  80% {transform: scale(1,1) translate(16em, 0)}
+  100% {transform: scale(1.2,.8) translate(-2em, -2em)}
+} 
+h1 {
+  color: orange;
+  font-family: 'Creepster', cursive;
+  position: absolute;
+  z-index: 10;
+  top: 100px;
+  left: 50px
+}
+.ground {
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+  background: #152a38
+}
+
+body {
+  background: black
+}
